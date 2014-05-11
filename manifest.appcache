@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1399798707596
+# Revision 1399801889117
 
 CACHE:
 index.html
@@ -9,16 +9,17 @@ contents/collaboration_tools/add_upstream_to_local.html
 contents/collaboration_tools.html
 contents/contribution.html
 contents/capistrano/README.html
-contents/capistrano/cap_ver_3_readme.html
 contents/capistrano/deploy_with_cap_ver_3.html
+contents/capistrano/cap_ver_3_readme.html
 contents/capistrano/sshkit_readme.html
 contents/capistrano/sshkit_usages.html
 contents/capistrano/upgrade_from_version_2.html
 contents/references/coding_convention.html
+contents/references/gitbook_deployment.html
 contents/references/github_forking_to_pull_request.html
 contents/references.html
-contents/server/centos_6_5.html
 contents/server/README.html
+contents/server/centos_6_5.html
 contents/tdd_rspec.html
 gitbook/app.js
 gitbook/fonts/anonymouspro/400.woff
