@@ -1,2 +1,6 @@
-# Book Example
+# RORLa Project
+
+: ROR Lab. 웹사이트 리뉴얼 공개 프로젝트
+
+ROR Lab.의 공유정신은 웹사이트 리뉴얼에도 그대로 이어져 누구나 참여할 수 있는 공개 프로젝트로 진행합니다.
 
