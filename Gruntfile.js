@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         'gitbook': {
             development: {
                 input: "./",
-                title: "RORLabNew Guide",
+                title: "RORLa Project GuideBook",
                 description: "The Guide book for Contributing RORLa Open Source Project",
                 github: "RORLabGitBook/rorlabnew_guide"
             }
