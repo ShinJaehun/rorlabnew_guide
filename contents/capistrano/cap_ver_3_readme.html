@@ -1,0 +1,598 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Capistrano 3 README | RORLabNew Guide</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="RORLabGitBook">
+        <meta name="description" content="The Guide book for Contributing RORLa Open Source Project">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../../contents/capistrano/deploy_with_cap_ver_3.html" />
+        
+        
+        <link rel="prev" href="../../contents/capistrano/upgrade_from_version_2.html" />
+        
+
+        <meta property="og:title" content="Capistrano 3 README | RORLabNew Guide">
+        <meta property="og:site_name" content="RORLabNew Guide">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/RORLabGitBook">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="RORLabGitBook/rorlabnew_guide.git" data-level="6.2" data-basepath="../.." data-revision="1399798707596">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../../" >RORLabNew Guide</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/edit/master/contents/capistrano/cap_ver_3_readme.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="contents/Development Stack.html">
+                
+                <a href="../../contents/Development Stack.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Development Stack
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="contents/collaboration_tools.html">
+                
+                <a href="../../contents/collaboration_tools.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Collaboration Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="contents/collaboration_tools/add_upstream_to_local.html">
+                            
+                            <a href="../../contents/collaboration_tools/add_upstream_to_local.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> 로컬머신에 &quot;upstream&quot; 저장소 추가하기
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="contents/contribution.html">
+                
+                <a href="../../contents/contribution.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Contribution
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="contents/offline_meeting.html">
+                
+                <a href="../../contents/offline_meeting.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Offline Meeting
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="contents/tdd_rspec.html">
+                
+                <a href="../../contents/tdd_rspec.html">
+                    <i class="fa fa-check"></i> <b>5.</b> TDD with RSpec
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="contents/capistrano/README.html">
+                
+                <a href="../../contents/capistrano/README.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Deployment with Capistrano
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="contents/capistrano/upgrade_from_version_2.html">
+                            
+                            <a href="../../contents/capistrano/upgrade_from_version_2.html">
+                                <i class="fa fa-check"></i> <b>6.1.</b> Capistrano 2.x 에서 업그레이드하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="contents/capistrano/cap_ver_3_readme.html">
+                            
+                            <a href="../../contents/capistrano/cap_ver_3_readme.html">
+                                <i class="fa fa-check"></i> <b>6.2.</b> Capistrano 3 README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="contents/capistrano/deploy_with_cap_ver_3.html">
+                            
+                            <a href="../../contents/capistrano/deploy_with_cap_ver_3.html">
+                                <i class="fa fa-check"></i> <b>6.3.</b> Capistrano 3를 이용한 레일스 프로젝트의 배포
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="contents/capistrano/sshkit_readme.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_readme.html">
+                                <i class="fa fa-check"></i> <b>6.4.</b> SSHKit README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="contents/capistrano/sshkit_usages.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_usages.html">
+                                <i class="fa fa-check"></i> <b>6.5.</b> SSHKit 사용 예제
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="contents/server/README.html">
+                
+                <a href="../../contents/server/README.html">
+                    <i class="fa fa-check"></i> <b>7.</b> 서버 세팅
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="contents/server/centos_6_5.html">
+                            
+                            <a href="../../contents/server/centos_6_5.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> CentOS 6.5 서버 설치
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="contents/references.html">
+                
+                <a href="../../contents/references.html">
+                    <i class="fa fa-check"></i> <b>8.</b> References
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="contents/references/github_forking_to_pull_request.html">
+                            
+                            <a href="../../contents/references/github_forking_to_pull_request.html">
+                                <i class="fa fa-check"></i> <b>8.1.</b> 저장소를 포킹하여 Pull Request하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="contents/references/coding_convention.html">
+                            
+                            <a href="../../contents/references/coding_convention.html">
+                                <i class="fa fa-check"></i> <b>8.2.</b> coding_convention
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 52.94117647058823%;min-width: 47.05882352941177%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../../contents/Development Stack.html" title="Development Stack" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../../contents/collaboration_tools.html" title="Collaboration Tools" class="chapter done new-chapter" data-progress="2" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../../contents/collaboration_tools/add_upstream_to_local.html" title="로컬머신에 &quot;upstream&quot; 저장소 추가하기" class="chapter done " data-progress="2.1" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../../contents/contribution.html" title="Contribution" class="chapter done new-chapter" data-progress="3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../../contents/offline_meeting.html" title="Offline Meeting" class="chapter done new-chapter" data-progress="4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../../contents/tdd_rspec.html" title="TDD with RSpec" class="chapter done new-chapter" data-progress="5" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../../contents/capistrano/README.html" title="Deployment with Capistrano" class="chapter done new-chapter" data-progress="6" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../../contents/capistrano/upgrade_from_version_2.html" title="Capistrano 2.x 에서 업그레이드하기" class="chapter done " data-progress="6.1" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../../contents/capistrano/cap_ver_3_readme.html" title="Capistrano 3 README" class="chapter done " data-progress="6.2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../../contents/capistrano/deploy_with_cap_ver_3.html" title="Capistrano 3를 이용한 레일스 프로젝트의 배포" class="chapter  " data-progress="6.3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_readme.html" title="SSHKit README" class="chapter  " data-progress="6.4" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_usages.html" title="SSHKit 사용 예제" class="chapter  " data-progress="6.5" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../../contents/server/README.html" title="서버 세팅" class="chapter  new-chapter" data-progress="7" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../../contents/server/centos_6_5.html" title="CentOS 6.5 서버 설치" class="chapter  " data-progress="7.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../../contents/references.html" title="References" class="chapter  new-chapter" data-progress="8" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../../contents/references/github_forking_to_pull_request.html" title="저장소를 포킹하여 Pull Request하기" class="chapter  " data-progress="8.1" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../../contents/references/coding_convention.html" title="coding_convention" class="chapter  " data-progress="8.2" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9">
+                    
+                        <h1 id="capistrano-3-readme">Capistrano 3 README</h1>
+<p>Gemfile에 아래와 같이 추가한다.</p>
+<pre><code class="lang-ruby">gem <span class="hljs-string">'capistrano'</span>, <span class="hljs-string">'~&gt; 3.1.0'</span>
+</code></pre>
+<p>그리고 번들 설치한다.</p>
+<pre><code class="lang-sh">$ bundle install
+</code></pre>
+<p>Capify : &quot;Capfile&quot; 또는 &quot;capfile&quot; 이 없다는 것을 확인한다.</p>
+<pre><code class="lang-sh">$ bundle exec cap install
+</code></pre>
+<p>이제 아래와 같은 파일을 생성하게 된다.</p>
+<pre><code>├── Capfile
+├── config
+│   ├── deploy
+│   │   ├── production.rb
+│   │   └── staging.rb
+│   └── deploy.rb
+└── lib
+    └── capistrano
+            └── tasks
+</code></pre><p>stage를 여러개 만들 때는 아래와 같이 한다.</p>
+<pre><code class="lang-sh">$ bundle exec cap install STAGES=local,sandbox,qa,production
+</code></pre>
+<h2 id="-">사용법</h2>
+<pre><code class="lang-sh">$ bundle exec cap -vT
+
+$ bundle exec cap staging deploy
+$ bundle exec cap production deploy
+
+$ bundle exec cap production deploy --dry-run
+$ bundle exec cap production deploy --prereqs
+$ bundle exec cap production deploy --trace
+</code></pre>
+<h2 id="tasks">Tasks</h2>
+<pre><code class="lang-ruby">server <span class="hljs-string">'example.com'</span>, <span class="hljs-symbol">roles:</span> [<span class="hljs-symbol">:web</span>, <span class="hljs-symbol">:app</span>]
+server <span class="hljs-string">'example.org'</span>, <span class="hljs-symbol">roles:</span> [<span class="hljs-symbol">:db</span>, <span class="hljs-symbol">:workers</span>]
+desc <span class="hljs-string">"Report Uptimes"</span>
+task <span class="hljs-symbol">:uptime</span> <span class="hljs-keyword">do</span>
+  on roles(<span class="hljs-symbol">:all</span>) <span class="hljs-keyword">do</span> |host|
+    execute <span class="hljs-symbol">:any_command</span>, <span class="hljs-string">"with args"</span>, <span class="hljs-symbol">:here</span>, <span class="hljs-string">"and here"</span>
+    info <span class="hljs-string">"Host <span class="hljs-subst">#{host}</span> (<span class="hljs-subst">#{host.roles.to_a.join(<span class="hljs-string">', '</span>)}</span>):\t<span class="hljs-subst">#{capture(<span class="hljs-symbol">:uptime</span>)}</span>"</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><strong>주의 :</strong></p>
+<p><code>execute(:bundle, :install)</code> 과 <code>execute(&#39;bundle install&#39;)</code> 은 동일하게 동작하지 않는다.</p>
+<p><code>execute()</code> 는 민감하게 동작을 한다. 예를 들어, <code>within &#39;./directory&#39; { execute(:bundle, :install) }</code>와 같이 호출하면, <code>execute()</code> 의 첫번째 인수는 whitespace가 없는 문자열이 된다. 이로써 이 명령이 여러가지 강력한 기능을 제공하는 <a href="https://github.com/capistrano/sshkit#the-command-map" target="_blank">SSHKit::CommandMap</a>을 이용할 수 있게 된다.</p>
+<p><code>execute()</code>의 첫번째 인수가 whitespace를 포함할 경우, 예를 들어, <code>within &#39;./directory&#39; { execute(&#39;bundle install&#39;) }</code>(또는 heredoc을 사용할 때)과 같을 때, Capistrano나 SSHKit가 어떻게 쉘 이스케이핑을 해야할지 알 수 없게 되어 어떠한 context나 command mapping도 수행할 수 없게 되는데, 즉, <code>within(){ }</code>(<code>with()</code>, <code>as()</code> 포함)가 효력을 가지지 못하게 된다. 이러한 문제를 해결하기 위한 시도가 있어 왔지만, 약간 직관적이지 않더라도 버그라고 생각하지 않는다.</p>
+<h2 id="before-after">Before / After</h2>
+<p> 동일한 이름의 task를 호출하는 곳에서는 포함하는 순서에 따라 실행된다.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># 이미 정의된 task를 호출할 때</span>
+before <span class="hljs-symbol">:starting</span>, <span class="hljs-symbol">:ensure_user</span>
+
+after <span class="hljs-symbol">:finishing</span>, <span class="hljs-symbol">:notify</span>
+
+
+<span class="hljs-comment"># 또는 블록으로 정의할 때</span>
+before <span class="hljs-symbol">:starting</span>, <span class="hljs-symbol">:ensure_user</span> <span class="hljs-keyword">do</span>
+  <span class="hljs-comment">#</span>
+<span class="hljs-keyword">end</span>
+
+after <span class="hljs-symbol">:finishing</span>, <span class="hljs-symbol">:notify</span> <span class="hljs-keyword">do</span>
+  <span class="hljs-comment">#</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>가끔, 파일을 생성하는 것과 같은 경우, Rake 의 prerequisite 메카니즘이 사용될 수 있다.</p>
+<pre><code class="lang-ruby">desc <span class="hljs-string">"Create Important File"</span>
+file <span class="hljs-string">'important.txt'</span> <span class="hljs-keyword">do</span> |t|
+  sh <span class="hljs-string">"touch <span class="hljs-subst">#{t.name}</span>"</span>
+<span class="hljs-keyword">end</span>
+desc <span class="hljs-string">"Upload Important File"</span>
+task <span class="hljs-symbol">:upload</span> =&gt; <span class="hljs-string">'important.txt'</span> <span class="hljs-keyword">do</span> |t|
+  on roles(<span class="hljs-symbol">:all</span>) <span class="hljs-keyword">do</span>
+    upload!(t.prerequisites.first, <span class="hljs-string">'/tmp'</span>)
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>다른 task를 호출하는 마지막 방법은 <code>invoke()</code> 명령을 호출하는 것이다.</p>
+<pre><code class="lang-ruby">task <span class="hljs-symbol">:one</span> <span class="hljs-keyword">do</span>
+  on roles(<span class="hljs-symbol">:all</span>) { info <span class="hljs-string">"One"</span> }
+<span class="hljs-keyword">end</span>
+task <span class="hljs-symbol">:two</span> <span class="hljs-keyword">do</span>
+  invoke <span class="hljs-symbol">:one</span>
+  on roles(<span class="hljs-symbol">:all</span>) { info <span class="hljs-string">"Two"</span> }
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이 메소드는 널리 사용된다.</p>
+<h2 id="-">사용자 입력</h2>
+<pre><code class="lang-ruby">desc <span class="hljs-string">"Ask about breakfast"</span>
+task <span class="hljs-symbol">:breakfast</span> <span class="hljs-keyword">do</span>
+  ask(<span class="hljs-symbol">:breakfast</span>, <span class="hljs-string">"pancakes"</span>)
+  on roles(<span class="hljs-symbol">:all</span>) <span class="hljs-keyword">do</span> |h|
+    execute <span class="hljs-string">"echo \"$(whoami) wants <span class="hljs-subst">#{fetch(<span class="hljs-symbol">:breakfast</span>)}</span> for breakfast!\""</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-task-">로컬 task를 실행하기</h2>
+<p>로컬 task는 <code>on</code> 대신에 <code>run_locally</code>를 사용한다.</p>
+<pre><code class="lang-ruby">desc <span class="hljs-string">'Notify service of deployment'</span>
+task <span class="hljs-symbol">:notify</span> <span class="hljs-keyword">do</span>
+  run_locally <span class="hljs-keyword">do</span>
+    with <span class="hljs-symbol">rails_env:</span> <span class="hljs-symbol">:development</span> <span class="hljs-keyword">do</span>
+      rake <span class="hljs-string">'service:notify'</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>물론, 로컬에서 실행할 때 항상 표준 루비 문법을 사용할 수 있다.</p>
+<pre><code class="lang-ruby">desc <span class="hljs-string">'Notify service of deployment'</span>
+task <span class="hljs-symbol">:notify</span> <span class="hljs-keyword">do</span>
+  %x(<span class="hljs-string">'RAILS_ENV=development bundle exec rake "service:notify"'</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>다른 방법으로는 rake 문법을 사용할 수 있다.</p>
+<pre><code class="lang-ruby">desc <span class="hljs-string">"Notify service of deployment"</span>
+task <span class="hljs-symbol">:notify</span> <span class="hljs-keyword">do</span>
+   sh <span class="hljs-string">'RAILS_ENV=development bundle exec rake "service:notify"'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-">콘솔작업</h2>
+<p>주의 : 위험한 영역이다. 콘솔 기능은 아직 완성되지 않았지만, 이전 모습모다는 훨씬 깔끔하게 설계되었고 먼 장래에 더 좋아질 것이다.</p>
+<p>임의 원격 명령을 실행한다. 이것을 사용하기 위해서는 <code>require &#39;capistrano/console</code> 을 추가해야 하는데, 이것은 필요한 task를 환경에 추가할 것이다.</p>
+<pre><code class="lang-sh">$ bundle exec cap staging console
+</code></pre>
+<p>서버 연결이 된 후에 결과는 아래와 같다.</p>
+<pre><code class="lang-sh">$ bundle exec cap production console
+capistrano console - enter command to execute on production
+production&gt; uptime
+ INFO [94db8027] Running /usr/bin/env uptime on leehambley@example.com:22
+DEBUG [94db8027] Command: /usr/bin/env uptime
+DEBUG [94db8027]   17:11:17 up 50 days, 22:31,  1 user,  load average: 0.02, 0.02, 0.05
+ INFO [94db8027] Finished in 0.435 seconds command successful.
+production&gt; who
+ INFO [9ce34809] Running /usr/bin/env who on leehambley@example.com:22
+DEBUG [9ce34809] Command: /usr/bin/env who
+DEBUG [9ce34809]  leehambley pts/0        2013-06-13 17:11 (port-11262.pppoe.wtnet.de)
+ INFO [9ce34809] Finished in 0.420 seconds command successful.
+</code></pre>
+<h2 id="pty-">PTY에 대하여</h2>
+<p>원격 서버에게 pty로 연결하도록 지정하는 구성 옵션이 있다. pty란 pseudo-terminal을 말하며 <code>interactive session</code>임을 알려 준다. 이러한 방법은 일반적으로 좋은 아이디어는 아니다.</p>
+<p>자세한 내용은 <a href="https://github.com/sstephenson/rbenv/wiki/Unix-shell-initialization" target="_blank">이 페이지</a>를 참고하기 바랍니다.</p>
+<p>Capistrano는 원격 서버와 연결할 때 <code>non-login</code>, <code>non-interactive</code> 쉘 모드로 연결된다. 이것은 우연한 것은 아니다.</p>
+<p>로그인과 쉘 초기화 스크립트가 로딩되지 않는, RVM과 rbenv관련된,  문제를 치료하기 위해,  종종 Capistrano를  마치 대일밴드 처럼  사용한다. 이 경우 RVM과 rbenv은 잘 못된 곳을 수리하는 연장이거나 적어도 제대로 사용되지 못하는 것이다.</p>
+<p>한편, 루비, Node, 파이썬 등과 같은 언어 런타임의 경우에 특히, 하나의 서버에 동시에 여러 개의 버전을 실행하고 환경변수를 이용해서 버전간 이동을 하고자 하는 유횩에 삐진다. 그러나 이것은 패턴에 반하는 것이고 좋지 않은 디자인 형태이기도 하다. (예를 들면, 회사의 인프라구조에는 staging 환경에서 테스트해 볼 수 없기 때문에 production 환경에서 루비 다른 버전을 테스트하는 경우)</p>
+<h2 id="-">구성</h2>
+<p>아래의 변수들은 변경할 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">변수명</th>
+<th>설명</th>
+<th>주의사항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>:repo_url</code></td>
+<td>scm 저장소(git. hg, svn)의 URL</td>
+<td>file://, https://, ssh://, svn+ssh:// 이 모두 지원된다.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>:branch</code></td>
+<td>배포하고자 하는 branch 이름</td>
+<td>이것은 git와 hg 저장소에 대해서만 해당한다. svn 저장소의 branch를 지정하기 위해서는 <code>:repo_url</code>을 branch 위치로 지정한다.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>:scm</code></td>
+<td>사용하는 소스관리시스템 이름</td>
+<td>현재 <code>:git</code>, <code>:hg</code>, <code>:svn</code> 만 지원한다.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>:tmp_dir</code></td>
+<td>(옵션으로) 사용하는 임시 디렉토리 (디폴트 값은 /tmp임)</td>
+<td>shared 웹호스팅을 사용하는 경우는 이 값을 변경할 필요가 있다.(예, /home/user/tmp/capistrano).</td>
+</tr>
+</tbody>
+</table>
+<p>아래의 변수들을 <em>더 이상 지원하지 않는다</em>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">변수명</th>
+<th>설명</th>
+<th>주의사항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>:copy_exclude</code></td>
+<td>(옵션으로) 배포시 제외되는 파일이나 폴더의 배열</td>
+<td>Git의 <code>.gitattributes</code>로 대체함. 자세한 내용은 <a href="https://github.com/capistrano/capistrano/issues/515" target="_blank">#515</a>를 참고한다.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sshkit">SSHKit</h2>
+<p><a href="https://github.com/leehambley/sshkit" target="_blank">SSHKit</a>는 Capistrano에서 SSH 연결을 위해서 사용시 배후에서 동작하는 드라이버이다. 더 깊이 알 수로고 SSHKit의 인터페이스에 직접 접근할 수 있다. (구성파일이 좋은 예이다)</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../contents/capistrano/upgrade_from_version_2.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../contents/capistrano/deploy_with_cap_ver_3.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../../gitbook/app.js"></script>
+        
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

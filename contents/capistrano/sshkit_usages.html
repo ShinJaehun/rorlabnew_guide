@@ -1,0 +1,680 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>SSHKit 사용 예제 | RORLabNew Guide</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="RORLabGitBook">
+        <meta name="description" content="The Guide book for Contributing RORLa Open Source Project">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../../contents/server/README.html" />
+        
+        
+        <link rel="prev" href="../../contents/capistrano/sshkit_readme.html" />
+        
+
+        <meta property="og:title" content="SSHKit 사용 예제 | RORLabNew Guide">
+        <meta property="og:site_name" content="RORLabNew Guide">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/RORLabGitBook">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="RORLabGitBook/rorlabnew_guide.git" data-level="6.5" data-basepath="../.." data-revision="1399798707596">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../../" >RORLabNew Guide</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/edit/master/contents/capistrano/sshkit_usages.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="contents/Development Stack.html">
+                
+                <a href="../../contents/Development Stack.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Development Stack
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="contents/collaboration_tools.html">
+                
+                <a href="../../contents/collaboration_tools.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Collaboration Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="contents/collaboration_tools/add_upstream_to_local.html">
+                            
+                            <a href="../../contents/collaboration_tools/add_upstream_to_local.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> 로컬머신에 &quot;upstream&quot; 저장소 추가하기
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="contents/contribution.html">
+                
+                <a href="../../contents/contribution.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Contribution
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="contents/offline_meeting.html">
+                
+                <a href="../../contents/offline_meeting.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Offline Meeting
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="contents/tdd_rspec.html">
+                
+                <a href="../../contents/tdd_rspec.html">
+                    <i class="fa fa-check"></i> <b>5.</b> TDD with RSpec
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="contents/capistrano/README.html">
+                
+                <a href="../../contents/capistrano/README.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Deployment with Capistrano
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="contents/capistrano/upgrade_from_version_2.html">
+                            
+                            <a href="../../contents/capistrano/upgrade_from_version_2.html">
+                                <i class="fa fa-check"></i> <b>6.1.</b> Capistrano 2.x 에서 업그레이드하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="contents/capistrano/cap_ver_3_readme.html">
+                            
+                            <a href="../../contents/capistrano/cap_ver_3_readme.html">
+                                <i class="fa fa-check"></i> <b>6.2.</b> Capistrano 3 README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="contents/capistrano/deploy_with_cap_ver_3.html">
+                            
+                            <a href="../../contents/capistrano/deploy_with_cap_ver_3.html">
+                                <i class="fa fa-check"></i> <b>6.3.</b> Capistrano 3를 이용한 레일스 프로젝트의 배포
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="contents/capistrano/sshkit_readme.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_readme.html">
+                                <i class="fa fa-check"></i> <b>6.4.</b> SSHKit README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="contents/capistrano/sshkit_usages.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_usages.html">
+                                <i class="fa fa-check"></i> <b>6.5.</b> SSHKit 사용 예제
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="contents/server/README.html">
+                
+                <a href="../../contents/server/README.html">
+                    <i class="fa fa-check"></i> <b>7.</b> 서버 세팅
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="contents/server/centos_6_5.html">
+                            
+                            <a href="../../contents/server/centos_6_5.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> CentOS 6.5 서버 설치
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="contents/references.html">
+                
+                <a href="../../contents/references.html">
+                    <i class="fa fa-check"></i> <b>8.</b> References
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="contents/references/github_forking_to_pull_request.html">
+                            
+                            <a href="../../contents/references/github_forking_to_pull_request.html">
+                                <i class="fa fa-check"></i> <b>8.1.</b> 저장소를 포킹하여 Pull Request하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="contents/references/coding_convention.html">
+                            
+                            <a href="../../contents/references/coding_convention.html">
+                                <i class="fa fa-check"></i> <b>8.2.</b> coding_convention
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 70.58823529411765%;min-width: 64.70588235294117%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../../contents/Development Stack.html" title="Development Stack" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../../contents/collaboration_tools.html" title="Collaboration Tools" class="chapter done new-chapter" data-progress="2" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../../contents/collaboration_tools/add_upstream_to_local.html" title="로컬머신에 &quot;upstream&quot; 저장소 추가하기" class="chapter done " data-progress="2.1" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../../contents/contribution.html" title="Contribution" class="chapter done new-chapter" data-progress="3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../../contents/offline_meeting.html" title="Offline Meeting" class="chapter done new-chapter" data-progress="4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../../contents/tdd_rspec.html" title="TDD with RSpec" class="chapter done new-chapter" data-progress="5" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../../contents/capistrano/README.html" title="Deployment with Capistrano" class="chapter done new-chapter" data-progress="6" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../../contents/capistrano/upgrade_from_version_2.html" title="Capistrano 2.x 에서 업그레이드하기" class="chapter done " data-progress="6.1" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../../contents/capistrano/cap_ver_3_readme.html" title="Capistrano 3 README" class="chapter done " data-progress="6.2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../../contents/capistrano/deploy_with_cap_ver_3.html" title="Capistrano 3를 이용한 레일스 프로젝트의 배포" class="chapter done " data-progress="6.3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_readme.html" title="SSHKit README" class="chapter done " data-progress="6.4" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_usages.html" title="SSHKit 사용 예제" class="chapter done " data-progress="6.5" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../../contents/server/README.html" title="서버 세팅" class="chapter  new-chapter" data-progress="7" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../../contents/server/centos_6_5.html" title="CentOS 6.5 서버 설치" class="chapter  " data-progress="7.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../../contents/references.html" title="References" class="chapter  new-chapter" data-progress="8" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../../contents/references/github_forking_to_pull_request.html" title="저장소를 포킹하여 Pull Request하기" class="chapter  " data-progress="8.1" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../../contents/references/coding_convention.html" title="coding_convention" class="chapter  " data-progress="8.2" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_12">
+                    
+                        <h1 id="sshkit-">SSHKit 사용 예제</h1>
+<p><a href="https://github.com/capistrano/sshkit/blob/master/EXAMPLES.md" target="_blank">영문 원본 보기</a></p>
+<h2 id="-">다른 계정으로 명령 실행하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  as <span class="hljs-string">'www-data'</span> <span class="hljs-keyword">do</span>
+    puts capture(<span class="hljs-symbol">:whoami</span>)
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-">디폴트 환경 변수로 실행하기</h2>
+<pre><code class="lang-ruby"><span class="hljs-constant">SSHKit</span>.config.default_env = { <span class="hljs-symbol">path:</span> <span class="hljs-string">'/usr/local/libexec/bin:$PATH'</span> }
+on hosts <span class="hljs-keyword">do</span> |host|
+  puts capture(<span class="hljs-symbol">:env</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-">다른 디렉토리에서 명령 실행하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  within <span class="hljs-string">'/var/log'</span> <span class="hljs-keyword">do</span>
+    puts capture(<span class="hljs-symbol">:head</span>, <span class="hljs-string">'-n5'</span>, <span class="hljs-string">'messages'</span>)
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-">특정 환경 변수로 명령 실행하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  with <span class="hljs-symbol">rack_env:</span> <span class="hljs-symbol">:test</span> <span class="hljs-keyword">do</span>
+    puts capture(<span class="hljs-string">"env | grep RACK_ENV"</span>)
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-">로깅 메소드를 이용하여 출력하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  f = <span class="hljs-string">'/some/file'</span>
+  <span class="hljs-keyword">if</span> test(<span class="hljs-string">"[ -d <span class="hljs-subst">#{f}</span> ]"</span>)
+    execute <span class="hljs-symbol">:touch</span>, f
+  <span class="hljs-keyword">else</span>
+    info <span class="hljs-string">"<span class="hljs-subst">#{f}</span> already exists on <span class="hljs-subst">#{host}</span>!"</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><code>SSHKit.config.output_vervosity</code> 의 현재 로그 레벨에 따라 <code>debug()</code>, <code>info()</code>, <code>warn()</code>, <code>error()</code>, <code>fatal()</code> 메소드를 사용할 수 있다.</p>
+<h2 id="-">다른 계정으로 다른 디렉토리에서 명령 실행하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  as <span class="hljs-string">'www-data'</span> <span class="hljs-keyword">do</span>
+    within <span class="hljs-string">'/var/log'</span> <span class="hljs-keyword">do</span>
+      puts capture(<span class="hljs-symbol">:whoami</span>)
+      puts capture(<span class="hljs-symbol">:pwd</span>)
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이것은 아래와 같은 결과를 보여 준다.</p>
+<pre><code class="lang-sh">www-data
+/var/log
+</code></pre>
+<p>주의사항 : 이 예제는 약간 오해의 소지가 있다. 즉, <code>www-data</code> 계정은 쉘이 정의되어 있지 않아서 이 계정으로 변경할 수 없다.</p>
+<h2 id="-">디스크로부터 파일 업로그하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  upload! <span class="hljs-string">'/config/database.yml'</span>, <span class="hljs-string">'/opt/my_project/shared/database.yml'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>주의사항 : <code>upload!()</code> 메소드는 <code>within()</code>, <code>as()</code> 등의 값을 받지 않는다. 이 문제는  라이브러리가 성숙해 짐에 따라 해결될 것이지만 현재로서는 아직 그대로다.</p>
+<h2 id="-">스트림으로부터 파일 업로드하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  file = <span class="hljs-constant">File</span>.open(<span class="hljs-string">'/config/database.yml'</span>)
+  io   = <span class="hljs-constant">StringIO</span>.new(....)
+  upload! file, <span class="hljs-string">'/opt/my_project/shared/database.yml'</span>
+  upload! io,   <span class="hljs-string">'/opt/my_project/shared/io.io.io'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>IO 스트리밍하는 것은 &quot;cat&quot; 하기 보다는 뭔가를 업로드하는데 유용하다. 예를 들면,</p>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  contents = <span class="hljs-constant">StringIO</span>.new(<span class="hljs-string">'ALL ALL = (ALL) NOPASSWD: ALL'</span>)
+  upload! contents, <span class="hljs-string">'/etc/sudoers.d/yolo'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이것은 &quot;echo(:cat, &#39;...?...&#39;, &#39;&gt; /etc/sudoers.d/yolo&#39;)&quot;와 같이 정확한 이스케이핑 순서를 기술해야 하는 수고를 덜어 준다.</p>
+<p>주의사항 : <code>upload!()</code> 메소드는 <code>within()</code>, <code>as()</code> 등의 값을 받지 않는다. 이 문제는  라이브러리가 성숙해 짐에 따라 해결될 것이지만 현재로서는 아직 그대로다.</p>
+<h2 id="-">디렉토리내의 파일을 업로드하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  upload! <span class="hljs-string">'.'</span>, <span class="hljs-string">'/tmp/mypwd'</span>, <span class="hljs-symbol">recursive:</span> <span class="hljs-keyword">true</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이 경우에 <code>recursive: true</code> 옵션은 <code>Net::{SCP, SFTP}</code>에서 사용가능한 옵션과 같은 것이다.</p>
+<h2 id="-global-ssh-">전역(global) SSH 옵션 설정하기</h2>
+<p>이 옵션들은 호스트마다 옵션을 달리 지정할 수 있다.</p>
+<pre><code class="lang-ruby"><span class="hljs-constant">Netssh</span>.configure <span class="hljs-keyword">do</span> |ssh|
+  ssh.connection_timeout = <span class="hljs-number">30</span>
+  ssh.ssh_options = {
+    <span class="hljs-symbol">keys:</span> <span class="hljs-string">%w(/home/user/.ssh/id_rsa)</span>,
+    <span class="hljs-symbol">forward_agent:</span> <span class="hljs-keyword">false</span>,
+    <span class="hljs-symbol">auth_methods:</span> <span class="hljs-string">%w(publickey password)</span>
+  }
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-group-id-">다른 group ID로 명령 실행하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  as <span class="hljs-symbol">user:</span> <span class="hljs-string">'www-data'</span>, <span class="hljs-symbol">group:</span> <span class="hljs-string">'project-group'</span> <span class="hljs-keyword">do</span>
+    within <span class="hljs-string">'/var/log'</span> <span class="hljs-keyword">do</span>
+      execute <span class="hljs-symbol">:touch</span>, <span class="hljs-string">'somefile'</span>
+      execute <span class="hljs-symbol">:ls</span>, <span class="hljs-string">'-l'</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>위의 설정에서,  생성된 파일은 <code>www-data</code> 계정과 <code>project-group</code> 그룹이 소유하게 된다.</p>
+<p><code>umask</code> 구성 옵션과 함께 사용하면, 로그인을 공유하지 않은 상태에서 팀 멤버간에 배포 스크립트를 쉽게 공유할 수 있다.</p>
+<h2 id="-">중첩된 디렉토리에서 작성하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span>
+  within <span class="hljs-string">"/var"</span> <span class="hljs-keyword">do</span>
+    puts capture(<span class="hljs-symbol">:pwd</span>)
+    within <span class="hljs-symbol">:log</span> <span class="hljs-keyword">do</span>
+      puts capture(<span class="hljs-symbol">:pwd</span>)
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이것은 아래와 같이 출력된다.</p>
+<pre><code class="lang-sh">/var/
+/var/log
+</code></pre>
+<p>디렉토리 경로는 <code>File.join()</code>를 이용해서 조합된다. 이 메소드는 경로 앞뒤에 오는 슬래시에 신경쓰지 않고도 각 부분을 정확하게 연결해서 조합해 준다. 이것은 <code>File.join()</code>이 코드를 실행하는 머신에서 동작하기 때문에 오해의 여지가 있다. 만약 윈도우즈 운영환경에서 실행된다면 명령을 받는 머신에 따라 경로가 부정확하게 조합될 수 있다.</p>
+<h2 id="-task-">백그라운드에서 task 수행하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span>
+  within <span class="hljs-string">'/opt/sites/example.com'</span> <span class="hljs-keyword">do</span>
+    background <span class="hljs-symbol">:rails</span>, <span class="hljs-symbol">:server</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이것은 <code>nohup /usr/bin/env rails server &gt; /dev/null &amp;</code>와 같이 실행하는데, 레일스 프로세스를 백그라운드에서 실행하도록 하여 파일 시스템을 nohup 로그 파일로 더럽히지 않게 된다.</p>
+<p>[역주] <code>nohup</code> - 리눅스, 유닉스에서 쉘스크립트파일(*.sh)을 데몬형태로 실행시키는 프로그램</p>
+<p>주의사항 : <code>background()</code> 메소드에 <code>sleep 5</code> 문자열을 넘겨 주면 제대로 동작하지 않을 것이다. 이것은 명령을 처리하는 규칙에 따른 것이어서, <code>background(:sleep, &quot;5&quot;)</code>와 같이(즉,  sleep이 명령이고, 5는 인수) 호출해야 한다.</p>
+<p>더 주의해야 할 사항 : background() task가 어떤 상황에서 특정 명령을 <code>nohup ... &amp;</code>로 감싸면, SSH 세션이 종료되어도 프로그램이 멈출 것이다.</p>
+<h2 id="host-">host 블록에 대해서 신경쓰지 않기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span>
+  <span class="hljs-comment"># |host| 블록 인수는 옵션이다.</span>
+  <span class="hljs-comment"># 블록 인수로 넘기지 않으면 블록내에서는 nil 값을 가지게 된다.</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-dev-null-">모든 출력을 <code>/dev/null</code> 로 리디렉트하기</h2>
+<pre><code class="lang-ruby"><span class="hljs-constant">SSHKit</span>.config.output = <span class="hljs-constant">File</span>.open(<span class="hljs-string">'/dev/null'</span>)
+</code></pre>
+<h2 id="-formatter-">매우 간단한 formatter 클래스 구현하기</h2>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyFormatter</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SSHKit::Formatter</span></span>::<span class="hljs-title">Abstract</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>write(obj)
+    <span class="hljs-keyword">case</span> obj.is_a? <span class="hljs-constant">SSHKit::Command</span>
+      <span class="hljs-comment"># Do something here, see the SSHKit::Command documentation</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-constant">SSHKit</span>.config.output = <span class="hljs-constant">MyFormatter</span>.new(<span class="hljs-variable">$stdout</span>)
+<span class="hljs-constant">SSHKit</span>.config.output = <span class="hljs-constant">MyFormatter</span>.new(<span class="hljs-constant">SSHKit</span>.config.output)
+<span class="hljs-constant">SSHKit</span>.config.output = <span class="hljs-constant">MyFormatter</span>.new(<span class="hljs-constant">File</span>.open(<span class="hljs-string">'log/deploy.log'</span>, <span class="hljs-string">'wb'</span>))
+</code></pre>
+<h2 id="-">특정 호스트에 대한 비밀번호 지정하기</h2>
+<pre><code class="lang-ruby">host = <span class="hljs-constant">SSHKit::Host</span>.new(<span class="hljs-string">'user@example.com'</span>)
+host.password = <span class="hljs-string">"hackme"</span>
+
+on host <span class="hljs-keyword">do</span> |host|
+  puts capture(<span class="hljs-symbol">:echo</span>, <span class="hljs-string">"I don't care about security!"</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-">뭔가 잘 못 됐을 때 실행 후 에러 발생하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  execute!(<span class="hljs-symbol">:echo</span>, <span class="hljs-string">'"Example Message!" 1&gt;&amp;2; false'</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이것은 <code>#message</code> &quot;Example Message!&quot; 와 함께 &#39;SSHKit::Command:Failed` 예외를 발생할 것이고 명령은 취소될 것이다.</p>
+<h2 id="-fail-">에러를 발생하지 않은 채 실패(fail)할 수 있는 테스트하기 또는 명령 실행하기</h2>
+<pre><code class="lang-ruby">on hosts <span class="hljs-keyword">do</span> |host|
+  <span class="hljs-keyword">if</span> test <span class="hljs-string">"[ -d /opt/sites ]"</span>
+    within <span class="hljs-string">"/opt/sites"</span> <span class="hljs-keyword">do</span>
+      execute <span class="hljs-symbol">:git</span>, <span class="hljs-symbol">:pull</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">else</span>
+    execute <span class="hljs-symbol">:git</span>, <span class="hljs-symbol">:clone</span>, <span class="hljs-string">'some-repository'</span>, <span class="hljs-string">'/opt/sites'</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><code>test()</code> 명령는 <code>execute()</code>와 동일하게 동작하지만 0가 아닌 값으로 명령이 종료할 때 false 값을 반환한다(<code>man 1 test</code>가 하듯이). 논리값을 반환하기 때문에 블록내에서 제어 흐름의 방향을 지정할 때 사용될 수 있다.</p>
+<h2 id="-property-">호스트 property에 따라 각 호스트마다 다른 작업 하기</h2>
+<pre><code class="lang-ruby">host1 = <span class="hljs-constant">SSHKit::Host</span>.new <span class="hljs-string">'user@example.com'</span>
+host2 = <span class="hljs-constant">SSHKit::Host</span>.new <span class="hljs-string">'user@example.org'</span>
+
+on hosts <span class="hljs-keyword">do</span> |host|
+  target = <span class="hljs-string">"/var/www/sites/"</span>
+  <span class="hljs-keyword">if</span> host.hostname =~ <span class="hljs-regexp">/org/</span>
+    target += <span class="hljs-string">"dotorg"</span>
+  <span class="hljs-keyword">else</span>
+    target += <span class="hljs-string">"dotcom"</span>
+  <span class="hljs-keyword">end</span>
+  execute! <span class="hljs-symbol">:git</span>, <span class="hljs-symbol">:clone</span>, <span class="hljs-string">"git@git.<span class="hljs-subst">#{host.hostname}</span>"</span>, target
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="-">가장 쉽게 호스트에 연결하기</h2>
+<pre><code class="lang-ruby">on <span class="hljs-string">'example.com'</span> <span class="hljs-keyword">do</span> |host|
+  execute <span class="hljs-symbol">:uptime</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>이것은 <code>example.com</code> 호스트명을 <code>SSHKit::Host</code> 객체로 변환해서 해당 호스트에 대한 정확한 구성 상태를 가져온다.</p>
+<h2 id="-">명령 맵핑 없이 명령 실행하기</h2>
+<p>호출하려는 명령이 스페이스 문자를 포함할 경우 맵핑되지 않을 것이다.</p>
+<pre><code class="lang-ruby"><span class="hljs-constant">Command</span>.new(<span class="hljs-symbol">:git</span>, <span class="hljs-symbol">:push</span>, <span class="hljs-symbol">:origin</span>, <span class="hljs-symbol">:master</span>).to_s
+<span class="hljs-comment"># =&gt; /usr/bin/env git push origin master</span>
+<span class="hljs-comment"># (also: execute(:git, :push, :origin, :master)</span>
+
+<span class="hljs-constant">Command</span>.new(<span class="hljs-string">"git push origin master"</span>).to_s
+<span class="hljs-comment"># =&gt; git push origin master</span>
+<span class="hljs-comment"># (also: execute("git push origin master"))</span>
+</code></pre>
+<p>이것은 ( <code>if</code>와 <code>test</code>와 같은) 쉘 내장 명령을 접근할 때 사용할 수 있다.</p>
+<h2 id="heredoc-">heredoc 와 함께 명령 실행하기</h2>
+<p>위의 기능을 확장한 것으로 아래와 같이 명령을 작성할 수 있다.</p>
+<pre><code class="lang-ruby">c = <span class="hljs-constant">Command</span>.new &lt;&lt;-<span class="hljs-constant">EOCOMMAND</span>
+  <span class="hljs-keyword">if</span> test -d /var/log
+  <span class="hljs-keyword">then</span> echo <span class="hljs-string">"Directory Exists"</span>
+  fi
+<span class="hljs-constant">EOCOMMAND</span>
+c.to_s
+<span class="hljs-comment"># =&gt; if test -d /var/log; then echo "Directory Exists; fi</span>
+<span class="hljs-comment"># (also: execute &lt;&lt;- EOCOMMAND........))</span>
+</code></pre>
+<p>주의사항 : 스크립트를 한줄로 표시하는 로직은 세련되어 보이지 않지만 모든 테스트에서 제대로 동작한다. 핵심 사항은 <code>if</code> 가 <code>/usr/bin/env if</code>로 매핑되지 않는다는 것인데, 이것은 문법상의 오류를 유발하지 않는다.</p>
+<h2 id="rake-">Rake 사용하기</h2>
+<p><code>Rakefile</code>에 아래와 같은 것을 둘 수 있다.</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'sshkit/dsl'</span>
+
+<span class="hljs-constant">SSHKit</span>.config.command_map[<span class="hljs-symbol">:rake</span>] = <span class="hljs-string">"./bin/rake"</span>
+
+desc <span class="hljs-string">"Deploy the site, pulls from Git, migrate the db and precompile assets, then restart Passenger."</span>
+task <span class="hljs-symbol">:deploy</span> <span class="hljs-keyword">do</span>
+  on <span class="hljs-string">"example.com"</span> <span class="hljs-keyword">do</span> |host|
+    within <span class="hljs-string">"/opt/sites/example.com"</span> <span class="hljs-keyword">do</span>
+      execute <span class="hljs-symbol">:git</span>, <span class="hljs-symbol">:pull</span>
+      execute <span class="hljs-symbol">:bundle</span>, <span class="hljs-symbol">:install</span>, <span class="hljs-string">'--deployment'</span>
+      execute <span class="hljs-symbol">:rake</span>, <span class="hljs-string">'db:migrate'</span>
+      execute <span class="hljs-symbol">:rake</span>, <span class="hljs-string">'assets:precompile'</span>
+      execute <span class="hljs-symbol">:touch</span>, <span class="hljs-string">'tmp/restart.txt'</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="dsl-">DSL 없이 사용하기</h2>
+<p><em>Coordinator</em> 가 모든 호스트를 <em>Host</em> 객체로 변환해 줄 것이다.</p>
+<pre><code class="lang-ruby"><span class="hljs-constant">Coordinator</span>.new(<span class="hljs-string">"one.example.com"</span>, <span class="hljs-constant">SSHKit::Host</span>.new(<span class="hljs-string">'two.example.com'</span>)).each <span class="hljs-symbol">in:</span> <span class="hljs-symbol">:sequence</span> <span class="hljs-keyword">do</span>
+  puts capture <span class="hljs-symbol">:uptime</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><code>./lib/sshkit/dsl.rb</code> 파일을 찾고할 수 있는 데, 여기에서 위와 거의 똑같은 코드를 볼 수 있지만 <code>on()</code> 메소드에 대해서 구현한 것이다.</p>
+<h2 id="host-properties-">Host properties 속성 이용하기</h2>
+<p><code>v0.0.6</code>부터 구현됨</p>
+<pre><code class="lang-ruby">servers = <span class="hljs-string">%w{one.example.com two.example.com
+             three.example.com four.example.com}</span>.collect <span class="hljs-keyword">do</span> |s|
+  h = <span class="hljs-constant">SSHKit::Host</span>.new(s)
+  <span class="hljs-keyword">if</span> s.match /(one|two)/
+    h.properties.roles = [<span class="hljs-symbol">:web</span>]
+  <span class="hljs-keyword">else</span>
+    h.properties.roles = [<span class="hljs-symbol">:app</span>]
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+on servers <span class="hljs-keyword">do</span> |host|
+  <span class="hljs-keyword">if</span> host.properties.roles.<span class="hljs-keyword">include</span>?(<span class="hljs-symbol">:web</span>)
+    <span class="hljs-comment"># 웹서버에 관련된 작업을 함.</span>
+  <span class="hljs-keyword">elsif</span> host.properties.roles.<span class="hljs-keyword">include</span>?(<span class="hljs-symbol">:app</span>)
+    <span class="hljs-comment"># 어플리케이션 서버에 관련된 작업을 함.</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><code>SSHKit::Host#properties</code>는 <a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/ostruct/rdoc/OpenStruct.html" target="_blank"><code>OpenStruct</code></a>이며 어쨌던 유효성 검증이 되지 않기 때문에 이에 관해서는 개발자에게 달려 있거나 라이브러리가 이 메카니즘에 의미나 규칙을 추가해 주어야 한다.</p>
+<h2 id="-">로컬 명령 실행하기</h2>
+<p><code>on</code>을 <code>run_locally</code>로 대체한다.</p>
+<pre><code class="lang-ruby">run_locally <span class="hljs-keyword">do</span>
+  within <span class="hljs-string">'/tmp'</span> <span class="hljs-keyword">do</span>
+    execute <span class="hljs-symbol">:whoami</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../contents/capistrano/sshkit_readme.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../contents/server/README.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../../gitbook/app.js"></script>
+        
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

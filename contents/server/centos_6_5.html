@@ -1,0 +1,612 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>CentOS 6.5 서버 설치 | RORLabNew Guide</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="RORLabGitBook">
+        <meta name="description" content="The Guide book for Contributing RORLa Open Source Project">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../../contents/references.html" />
+        
+        
+        <link rel="prev" href="../../contents/server/README.html" />
+        
+
+        <meta property="og:title" content="CentOS 6.5 서버 설치 | RORLabNew Guide">
+        <meta property="og:site_name" content="RORLabNew Guide">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/RORLabGitBook">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="RORLabGitBook/rorlabnew_guide.git" data-level="7.1" data-basepath="../.." data-revision="1399798707596">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../../" >RORLabNew Guide</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/edit/master/contents/server/centos_6_5.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="contents/Development Stack.html">
+                
+                <a href="../../contents/Development Stack.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Development Stack
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="contents/collaboration_tools.html">
+                
+                <a href="../../contents/collaboration_tools.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Collaboration Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="contents/collaboration_tools/add_upstream_to_local.html">
+                            
+                            <a href="../../contents/collaboration_tools/add_upstream_to_local.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> 로컬머신에 &quot;upstream&quot; 저장소 추가하기
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="contents/contribution.html">
+                
+                <a href="../../contents/contribution.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Contribution
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="contents/offline_meeting.html">
+                
+                <a href="../../contents/offline_meeting.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Offline Meeting
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="contents/tdd_rspec.html">
+                
+                <a href="../../contents/tdd_rspec.html">
+                    <i class="fa fa-check"></i> <b>5.</b> TDD with RSpec
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="contents/capistrano/README.html">
+                
+                <a href="../../contents/capistrano/README.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Deployment with Capistrano
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="contents/capistrano/upgrade_from_version_2.html">
+                            
+                            <a href="../../contents/capistrano/upgrade_from_version_2.html">
+                                <i class="fa fa-check"></i> <b>6.1.</b> Capistrano 2.x 에서 업그레이드하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="contents/capistrano/cap_ver_3_readme.html">
+                            
+                            <a href="../../contents/capistrano/cap_ver_3_readme.html">
+                                <i class="fa fa-check"></i> <b>6.2.</b> Capistrano 3 README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="contents/capistrano/deploy_with_cap_ver_3.html">
+                            
+                            <a href="../../contents/capistrano/deploy_with_cap_ver_3.html">
+                                <i class="fa fa-check"></i> <b>6.3.</b> Capistrano 3를 이용한 레일스 프로젝트의 배포
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="contents/capistrano/sshkit_readme.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_readme.html">
+                                <i class="fa fa-check"></i> <b>6.4.</b> SSHKit README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="contents/capistrano/sshkit_usages.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_usages.html">
+                                <i class="fa fa-check"></i> <b>6.5.</b> SSHKit 사용 예제
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="contents/server/README.html">
+                
+                <a href="../../contents/server/README.html">
+                    <i class="fa fa-check"></i> <b>7.</b> 서버 세팅
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="contents/server/centos_6_5.html">
+                            
+                            <a href="../../contents/server/centos_6_5.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> CentOS 6.5 서버 설치
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="contents/references.html">
+                
+                <a href="../../contents/references.html">
+                    <i class="fa fa-check"></i> <b>8.</b> References
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="contents/references/github_forking_to_pull_request.html">
+                            
+                            <a href="../../contents/references/github_forking_to_pull_request.html">
+                                <i class="fa fa-check"></i> <b>8.1.</b> 저장소를 포킹하여 Pull Request하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="contents/references/coding_convention.html">
+                            
+                            <a href="../../contents/references/coding_convention.html">
+                                <i class="fa fa-check"></i> <b>8.2.</b> coding_convention
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 82.3529411764706%;min-width: 76.47058823529412%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../../contents/Development Stack.html" title="Development Stack" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../../contents/collaboration_tools.html" title="Collaboration Tools" class="chapter done new-chapter" data-progress="2" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../../contents/collaboration_tools/add_upstream_to_local.html" title="로컬머신에 &quot;upstream&quot; 저장소 추가하기" class="chapter done " data-progress="2.1" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../../contents/contribution.html" title="Contribution" class="chapter done new-chapter" data-progress="3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../../contents/offline_meeting.html" title="Offline Meeting" class="chapter done new-chapter" data-progress="4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../../contents/tdd_rspec.html" title="TDD with RSpec" class="chapter done new-chapter" data-progress="5" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../../contents/capistrano/README.html" title="Deployment with Capistrano" class="chapter done new-chapter" data-progress="6" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../../contents/capistrano/upgrade_from_version_2.html" title="Capistrano 2.x 에서 업그레이드하기" class="chapter done " data-progress="6.1" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../../contents/capistrano/cap_ver_3_readme.html" title="Capistrano 3 README" class="chapter done " data-progress="6.2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../../contents/capistrano/deploy_with_cap_ver_3.html" title="Capistrano 3를 이용한 레일스 프로젝트의 배포" class="chapter done " data-progress="6.3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_readme.html" title="SSHKit README" class="chapter done " data-progress="6.4" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_usages.html" title="SSHKit 사용 예제" class="chapter done " data-progress="6.5" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../../contents/server/README.html" title="서버 세팅" class="chapter done new-chapter" data-progress="7" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../../contents/server/centos_6_5.html" title="CentOS 6.5 서버 설치" class="chapter done " data-progress="7.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../../contents/references.html" title="References" class="chapter  new-chapter" data-progress="8" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../../contents/references/github_forking_to_pull_request.html" title="저장소를 포킹하여 Pull Request하기" class="chapter  " data-progress="8.1" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../../contents/references/coding_convention.html" title="coding_convention" class="chapter  " data-progress="8.2" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_17">
+                    
+                        <h1 id="centos-6-5-x86_64-">CentOS 6.5 x86_64 서버 최소판 설치</h1>
+<ul>
+<li>현재 가장 최신 버전은 <a href="http://mirror.premi.st/centos/6.5/isos/x86_64/" target="_blank">6.5</a></li>
+<li>DVD 한장으로 구울 수 있는 배포판으로 <a href="http://mirror.premi.st/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-LiveDVD.iso" target="_blank">CentOS-6.5-x86_64-LiveDVD.iso</a> 가 있고,</li>
+<li>최소설치만 할 수 있는 배포으로는 <a href="http://mirror.premi.st/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-minimal.iso" target="_blank">CentOS-6.5-x86_64-minimal.iso</a> 가 있다.</li>
+</ul>
+<hr>
+
+<h2 id="-">시스템 업데이트</h2>
+<p>: <code>Development Tools</code>를 설칠할 때 <code>git</code>도 함께 설치된다. (2014년 3월 7일  현재 - 1.7.1 버전, 그러나 최신버전은 1.9.0)</p>
+<pre><code># yum -y update
+# yum -y groupinstall &quot;Development Tools&quot;
+</code></pre><hr>
+
+<h2 id="sudo-">Sudo 패키지 설치</h2>
+<p>: 최소판에는 sudo가 설치되어 있지 않으므로 아래와 같이 sudo 패키지를 설치한다.</p>
+<pre><code># yum install -y sudo
+</code></pre><hr>
+
+<h2 id="-">개발툴 설치</h2>
+<pre><code># yum groupinstall -y &quot;Development Tools&quot;
+</code></pre><hr>
+
+<h2 id="deployer-">Deployer 유저 등록</h2>
+<p>: 서버 배포를 위한 유저를 등록한다.</p>
+<ul>
+<li><p>통상 <code>deployer</code>라는 유저명을 사용한다.</p>
+<pre><code># useradd deployer
+# passwd deployer
+</code></pre></li>
+<li><p><code>/etc/group</code> 파일을 에디터(vi)로 열고 <code>wheel</code> 그룹에 <code>deployer</code>를 추가하고,</p>
+<pre><code># vi /etc/group
+wheel:x:10:root,deployer
+</code></pre></li>
+<li><p><code>/etc/sudoers</code> 파일을 열어 <code>wheel</code> 그룹에 대해서 아래와 같이 코멘트 표시(#)를 삭제한다.</p>
+<pre><code>## Allows people in group wheel to run all commands
+%wheel  ALL=(ALL)       ALL
+## Same thing without a password
+%wheel  ALL=(ALL)       NOPASSWD: ALL
+</code></pre></li>
+<li><p>sshd를 재시작한다.</p>
+<pre><code># service sshd restart
+</code></pre></li>
+</ul>
+<hr>
+
+<h2 id="firewall-">Firewall 설정</h2>
+<p>: 방화벽에서 80포트를 열어둔다.</p>
+<pre><code># vi /etc/sysconfig/iptables
+
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+</code></pre><ul>
+<li><p>iptables를 재시작한다.</p>
+<pre><code># service iptables restart
+</code></pre></li>
+</ul>
+<hr>
+
+<h2 id="nginx-">Nginx 서버</h2>
+<ul>
+<li><p><a href="http://wiki.nginx.org/Install" target="_blank">http://wiki.nginx.org/Install</a></p>
+</li>
+<li><p><code>nginx</code>의 yum 저장소를 추가하기 위해서, <code>/etc/yum.repos.d/nginx.repo</code> 파일을 생성하고 아래의 옵션을 붙여 넣는다.</p>
+<pre><code>[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=0
+enabled=1
+</code></pre><p>: CentOS, RHEL, Scientific Linux가 릴리스 버전($releasever) 변수에 따라 원하는 값으로 대체한다. OS 버전에 따라 5.x는 &quot;5&quot;, 6.x 는 &quot;6&quot;을 사용하면 된다. $basesearch 에는 &quot;x86_64&quot; 값을 지정한다.</p>
+</li>
+</ul>
+<pre><code>  # yum install -y nginx
+  # chkconfig --levels 235 nginx on
+  # mkdir -p /etc/nginx/sites-enabled
+  # vi /etc/nginx/nginx.conf
+</code></pre><ul>
+<li><p>설치하고 /etc/nginx 디렉토리에 sites-enabled 폴더를 생성해 준다. 그리고 /etc/nginx/nginx.conf 파일 32번 줄에 include /etc/nginx/sites-enabled/*.conf; 추가한다.</p>
+</li>
+<li><p><code>include /etc/nginx/sites-enabled/*.conf;</code> 을 추가하고, user를 <code>deployer</code>로 변경한다.</p>
+</li>
+</ul>
+<ul>
+<li><p>nginx 를 시작한다.</p>
+<pre><code># /etc/init.d/nginx start
+</code></pre></li>
+</ul>
+<hr>
+
+<h2 id="mysql-5-5-36-ref-http-www-webtatic-com-packages-mysql55-">MySQL (5.5.36) 서버 (<a href="http://www.webtatic.com/packages/mysql55/" target="_blank">ref.</a>)</h2>
+<ul>
+<li><p>MySQL 서버를 설치하기 전에 mysql 관련된 것을 모두 제거한다.</p>
+<pre><code># yum remove mysql mysql-* -y
+# cd /etc/yum.repos.d
+# wget http://rpms.famillecollet.com/enterprise/remi.repo
+# yum --enablerepo=remi install -y mysql mysql-server mysql-devel
+# chkconfig --levels 235 mysqld on
+# service mysqld start
+# mysql_secure_installation
+</code></pre></li>
+<li><p>/etc/my.cnf 파일에 아래 줄을 추가해 준다.</p>
+<pre><code>[mysqld]
+character-set-server = utf8
+</code></pre></li>
+<li><p>권한을 승인한다.</p>
+<pre><code># mysql -u root -p
+
+mysql&gt; grant usage on *.* to deployer@localhost identified by &#39;password&#39;;
+</code></pre></li>
+</ul>
+<hr>
+
+<h2 id="nodejs-">NodeJs 설치</h2>
+<p>: [참고] : <a href="https://www.digitalocean.com/community/articles/how-to-install-and-run-a-node-js-app-on-centos-6-4-64bit" target="_blank">https://www.digitalocean.com/community/articles/how-to-install-and-run-a-node-js-app-on-centos-6-4-64bit</a></p>
+<pre><code># cd /usr/src
+# wget http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz
+# tar zxf node-v0.10.26.tar.gz
+# cd node-v0.10.26
+# ./configure
+# make   (6-7분 소요됨)  pc 사양이 좋으면 3분안에 끝나기도 함 ㅎㅎㅎ.
+# make install
+</code></pre><hr>
+
+<h2 id="imagemagick-">ImageMagick 설치 (시간 많이 걸리네~)</h2>
+<pre><code># yum install -y tcl-devel libpng-devel libjpeg-devel ghostscript-devel bzip2-devel freetype-devel libtiff-devel
+# wget ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick.tar.gz
+
+# tar -xzvf ImageMagick.tar.gz
+# cd ImageMagick-6.8.8-7
+# ./configure --prefix=/usr/local --with-bzlib=yes --with-fontconfig=yes --with-freetype=yes --with-gslib=yes --with-gvc=yes --with-jpeg=yes --with-jp2=yes --with-png=yes --with-tiff=yes
+
+# make
+# make install
+# convert --version
+# yum install -y ImageMagick-devel
+</code></pre><ul>
+<li><p><code>deployer</code> 계정 홈페이지의 <code>.bashrc</code> 파일에 아래를 추가한다.</p>
+<pre><code># su deployer
+# vi ~/.bashrc
+
+export PKG_CONFIG_PATH=&quot;/usr/local/lib/pkgconfig&quot;
+</code></pre></li>
+<li><p>그리고, root 계정으로 접속해서</p>
+<pre><code># ln -s /usr/local/include/ImageMagick/wand /usr/local/include/wand
+# ln -s /usr/local/include/ImageMagick/magick /usr/local/include/magick
+# ldconfig /usr/local/lib
+# su deployer
+# cd ~
+</code></pre></li>
+</ul>
+<p><hr></p>
+<h2 id="-">배포</h2>
+<p>: 이후부터는 로컬에서 capistrano로 배포작업을 수행한다.</p>
+<ul>
+<li><p>프로젝트의 Gemfile 파일에 아래의 젬을 추가하고 bundle install 한다.</p>
+<pre><code>gem &#39;capistrano-rbenv&#39;
+</code></pre></li>
+<li><p><code>capistrano</code>와 <code>capistrano-rbenv</code> 젬을  레일스 프로젝트의 <code>gemfile</code>에 추가하여, <code>bundle install</code> 하면, <code>capistrano</code>로 배포시, 특히, <code>cap deploy:setup</code> 명령을 실행하면, 자동으로 <code>rbenv</code>와 <code>ruby-build</code>가 설치되고, 디폴트로 <code>1.9.3-p194</code> 버전 루비가 설치된다. <code>config/deploy.rb</code> 파일에 <code>set :rbenv_ruby_version, &quot;1.9.3-p286&quot;</code> 와 같이 추가해 주면, 원하는 루비 버전을 설치할 수도 있다. <a href="https://github.com/yyuu/capistrano-rbenv" target="_blank">ref.</a></p>
+</li>
+</ul>
+<hr>
+
+<h1 id="-">부록</h1>
+<p>: 아래의 설치는 옵션이다.</p>
+<hr>
+
+<h2 id="postfix-">Postfix 설치</h2>
+<p>: 서버에서 이메일을 보내고 싶은 경우 설치한다.</p>
+<ul>
+<li><p><a href="http://freelinuxtutorials.com/quick-tips-and-tricks/configure-postfix-to-use-gmail-in-rhelcentos/" target="_blank">Gmail을 이용해서 postfix 설정하기</a></p>
+<pre><code># yum install -y postfix
+</code></pre></li>
+</ul>
+<hr>
+
+<h2 id="git-">Git 업그레이드하기</h2>
+<p>: 참고 - <a href="http://tecadmin.net/how-to-upgrade-git-version-1-7-10-on-centos-6" target="_blank">http://tecadmin.net/how-to-upgrade-git-version-1-7-10-on-centos-6</a></p>
+<pre><code># rpm -i &#39;http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm&#39;
+# rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt
+</code></pre><p>아래와 같이 rpmforge.repo 파일을 열어서 [rpmforge-extras] 부분의 enabled=0 to 1로 변경한다.</p>
+<pre><code># vim /etc/yum.repos.d/rpmforge.repo
+</code></pre><hr>
+
+<h2 id="git-">Git 별도설치</h2>
+<p>: <code>git</code>를 별도록 설치할 때 아래와 같이 한다.</p>
+<ul>
+<li><code>git</code>를 소스컴파일로 설치한다. (<a href="http://rajivpandit.wordpress.com/2013/09/21/how-to-install-git-1-8-4-and-git-client-on-linux-centos-6-4-rhel6/" target="_blank">ref.</a>) 깔금하게 설치된다.</li>
+<li><p>가장 최신버전 1.9.0 (3월 7일, 2014년 현재)
+( <a href="http://code.google.com/p/git-core/downloads/list" target="_blank">버전별 git 다운로드 리스트 보기</a> )</p>
+<pre><code># yum install gettext-devel expat-devel curl-devel zlib-devel openssl-devel
+# cd /usr/src
+# wget https://www.kernel.org/pub/software/scm/git/git-1.8.4.tar.gz
+# tar xzvf git-1.8.4.tar.gz
+# cd git-1.8.4
+# make prefix=/opt/git all
+# make prefix=/opt/git install
+# export PATH=”/opt/git/bin:$PATH”
+</code></pre></li>
+</ul>
+<p><hr></p>
+<h2 id="-">구글링 자료 모음</h2>
+<ul>
+<li><a href="http://www.centos.org" target="_blank">http://www.centos.org</a> [공식홈페이지]</li>
+<li><a href="http://isoredirect.centos.org/centos/6/isos/x86_64/" target="_blank">http://isoredirect.centos.org/centos/6/isos/x86_64/</a> [다운로드]</li>
+<li><a href="http://faq.hostway.co.kr/story/4510" target="_blank">http://faq.hostway.co.kr/story/4510</a> [CentOS 6.3 10분 안에 설치하기, 한글]</li>
+<li><a href="http://mcchae.egloos.com/10937303" target="_blank">http://mcchae.egloos.com/10937303</a> [지훈현서의 CentOS 6.3 미니멀(서버) 설치하기, 한글]</li>
+</ul>
+<p><hr>
+작성일 : 2014년 3월 7일</p>
+<p>최종갱신일 : 2014년 3월 8일 오전 8:20 현재</p>
+<p>작성자 : 최효성, ROR Lab.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../contents/server/README.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../contents/references.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../../gitbook/app.js"></script>
+        
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

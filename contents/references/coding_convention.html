@@ -1,0 +1,415 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>coding_convention | RORLabNew Guide</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="RORLabGitBook">
+        <meta name="description" content="The Guide book for Contributing RORLa Open Source Project">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        
+        <link rel="prev" href="../../contents/references/github_forking_to_pull_request.html" />
+        
+
+        <meta property="og:title" content="coding_convention | RORLabNew Guide">
+        <meta property="og:site_name" content="RORLabNew Guide">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/RORLabGitBook">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="RORLabGitBook/rorlabnew_guide.git" data-level="8.2" data-basepath="../.." data-revision="1399798707596">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../../" >RORLabNew Guide</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/RORLabGitBook/rorlabnew_guide.git/edit/master/contents/references/coding_convention.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="contents/Development Stack.html">
+                
+                <a href="../../contents/Development Stack.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Development Stack
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="contents/collaboration_tools.html">
+                
+                <a href="../../contents/collaboration_tools.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Collaboration Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="contents/collaboration_tools/add_upstream_to_local.html">
+                            
+                            <a href="../../contents/collaboration_tools/add_upstream_to_local.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> 로컬머신에 &quot;upstream&quot; 저장소 추가하기
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="contents/contribution.html">
+                
+                <a href="../../contents/contribution.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Contribution
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="contents/offline_meeting.html">
+                
+                <a href="../../contents/offline_meeting.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Offline Meeting
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="contents/tdd_rspec.html">
+                
+                <a href="../../contents/tdd_rspec.html">
+                    <i class="fa fa-check"></i> <b>5.</b> TDD with RSpec
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="contents/capistrano/README.html">
+                
+                <a href="../../contents/capistrano/README.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Deployment with Capistrano
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="contents/capistrano/upgrade_from_version_2.html">
+                            
+                            <a href="../../contents/capistrano/upgrade_from_version_2.html">
+                                <i class="fa fa-check"></i> <b>6.1.</b> Capistrano 2.x 에서 업그레이드하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="contents/capistrano/cap_ver_3_readme.html">
+                            
+                            <a href="../../contents/capistrano/cap_ver_3_readme.html">
+                                <i class="fa fa-check"></i> <b>6.2.</b> Capistrano 3 README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="contents/capistrano/deploy_with_cap_ver_3.html">
+                            
+                            <a href="../../contents/capistrano/deploy_with_cap_ver_3.html">
+                                <i class="fa fa-check"></i> <b>6.3.</b> Capistrano 3를 이용한 레일스 프로젝트의 배포
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="contents/capistrano/sshkit_readme.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_readme.html">
+                                <i class="fa fa-check"></i> <b>6.4.</b> SSHKit README
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="contents/capistrano/sshkit_usages.html">
+                            
+                            <a href="../../contents/capistrano/sshkit_usages.html">
+                                <i class="fa fa-check"></i> <b>6.5.</b> SSHKit 사용 예제
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="contents/server/README.html">
+                
+                <a href="../../contents/server/README.html">
+                    <i class="fa fa-check"></i> <b>7.</b> 서버 세팅
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="contents/server/centos_6_5.html">
+                            
+                            <a href="../../contents/server/centos_6_5.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> CentOS 6.5 서버 설치
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="contents/references.html">
+                
+                <a href="../../contents/references.html">
+                    <i class="fa fa-check"></i> <b>8.</b> References
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="contents/references/github_forking_to_pull_request.html">
+                            
+                            <a href="../../contents/references/github_forking_to_pull_request.html">
+                                <i class="fa fa-check"></i> <b>8.1.</b> 저장소를 포킹하여 Pull Request하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="contents/references/coding_convention.html">
+                            
+                            <a href="../../contents/references/coding_convention.html">
+                                <i class="fa fa-check"></i> <b>8.2.</b> coding_convention
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 100%;min-width: 94.11764705882354%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../../contents/Development Stack.html" title="Development Stack" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../../contents/collaboration_tools.html" title="Collaboration Tools" class="chapter done new-chapter" data-progress="2" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../../contents/collaboration_tools/add_upstream_to_local.html" title="로컬머신에 &quot;upstream&quot; 저장소 추가하기" class="chapter done " data-progress="2.1" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../../contents/contribution.html" title="Contribution" class="chapter done new-chapter" data-progress="3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../../contents/offline_meeting.html" title="Offline Meeting" class="chapter done new-chapter" data-progress="4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../../contents/tdd_rspec.html" title="TDD with RSpec" class="chapter done new-chapter" data-progress="5" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../../contents/capistrano/README.html" title="Deployment with Capistrano" class="chapter done new-chapter" data-progress="6" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../../contents/capistrano/upgrade_from_version_2.html" title="Capistrano 2.x 에서 업그레이드하기" class="chapter done " data-progress="6.1" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../../contents/capistrano/cap_ver_3_readme.html" title="Capistrano 3 README" class="chapter done " data-progress="6.2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../../contents/capistrano/deploy_with_cap_ver_3.html" title="Capistrano 3를 이용한 레일스 프로젝트의 배포" class="chapter done " data-progress="6.3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_readme.html" title="SSHKit README" class="chapter done " data-progress="6.4" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../../contents/capistrano/sshkit_usages.html" title="SSHKit 사용 예제" class="chapter done " data-progress="6.5" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../../contents/server/README.html" title="서버 세팅" class="chapter done new-chapter" data-progress="7" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../../contents/server/centos_6_5.html" title="CentOS 6.5 서버 설치" class="chapter done " data-progress="7.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../../contents/references.html" title="References" class="chapter done new-chapter" data-progress="8" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../../contents/references/github_forking_to_pull_request.html" title="저장소를 포킹하여 Pull Request하기" class="chapter done " data-progress="8.1" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../../contents/references/coding_convention.html" title="coding_convention" class="chapter done " data-progress="8.2" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_14">
+                    
+                        <h1 id="-">프로젝트에서 사용될 코딩 컨벤션</h1>
+<p>Soonsang Hong 님께서 행아웃에서 말씀해주신 내용인데요. 코딩 컨벤션을 어느정도 강제하는것이 좋겠습니다.</p>
+<ul>
+<li><p>코딩 컨벤션은 어느정도 강제하는것이 좋은데 처음부터 전체를 정하는것은 어려우니 Github등 유명한곳의 코딩 컨벤션을 지정. 추후에 코드들이 풀리퀘스트오면 그때마다 토론하고 하면서 rorla_api 만의 코딩 컨벤션을 정립하면서 어느정도 강제. - 정창훈</p>
+</li>
+<li><p>우선은 괜찮은 컨벤션룰을 소개해주시는건 어떨까요? - 채종원</p>
+<ul>
+<li>잘 정리된곳은 github 이라고 보는데요. Rails 스타일은 아니지만 Ruby, CSS, Javascript, markup, 단어선정등 우리에게 전반적으로 도움이 될것이라고 봅니다. Github 스타일 가이드(<a href="https://github.com/styleguide" target="_blank">https://github.com/styleguide</a>)</li>
+</ul>
+</li>
+<li><p>Ruby(<a href="https://github.com/bbatsov/ruby-style-guide" target="_blank">https://github.com/bbatsov/ruby-style-guide</a>)</p>
+</li>
+<li>Rails(<a href="https://github.com/bbatsov/rails-style-guide" target="_blank">https://github.com/bbatsov/rails-style-guide</a>) ruby &amp; rails 스타일 가이드 - 이한국<ul>
+<li>코딩 컨벤션은 여러개를 적용하면 안되니까 hipchat에서 어떤걸 선정할지 정의가 되면 이 페이지에 해당 내용으로 바꾸면 될것 같습니다. - 정창훈</li>
+</ul>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../contents/references/github_forking_to_pull_request.html" class="navigation navigation-prev navigation-unique"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../../gitbook/app.js"></script>
+        
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
