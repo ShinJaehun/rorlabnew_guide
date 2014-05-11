@@ -2,5 +2,6 @@
 
 : ROR Lab. 웹사이트 리뉴얼 공개 프로젝트
 
-ROR Lab.의 공유정신은 웹사이트 리뉴얼에도 그대로 이어져 누구나 참여할 수 있는 공개 프로젝트로 진행합니다.
+이 책은 이 프로젝트에 참여하여 협업하는데 필요한 안내문과 기술문서를 포함한다.
 
+이 책의 집필 시에 [Gitbook](http://www.gitbook.io)과 [전용 에디터](https://github.com/GitbookIO/editor/releases)가 각자의 로컬 머신에 설치되어 있어야 한다.
