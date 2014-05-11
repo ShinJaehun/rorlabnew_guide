@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                 input: "./",
                 title: "RORLabNew Guide",
                 description: "The Guide book for Contributing RORLa Open Source Project",
-                github: "RORLabGitBook/rorlabnew_guide.git"
+                github: "RORLabGitBook/rorlabnew_guide"
             }
         },
         'gh-pages': {
