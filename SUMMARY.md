@@ -17,4 +17,5 @@
 * [References](contents/references.md)
     * [저장소를 포킹하여 Pull Request하기](contents/references/github_forking_to_pull_request.md)
     * [coding_convention](contents/references/coding_convention.md)
+    * [GitBook 저장소를 gh-pages로 배포하기](contents/references/gitbook_deployment.md)
 
