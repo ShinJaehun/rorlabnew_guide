@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1399849598794
+# Revision 1399858950674
 
 CACHE:
 index.html
@@ -16,8 +16,8 @@ contents/capistrano/sshkit_usages.html
 contents/capistrano/upgrade_from_version_2.html
 contents/references/coding_convention.html
 contents/references/gitbook_deployment.html
-contents/references.html
 contents/references/github_forking_to_pull_request.html
+contents/references.html
 contents/server/README.html
 contents/server/centos_6_5.html
 contents/tdd_rspec.html
@@ -57,8 +57,9 @@ gitbook/jsrepl/sandbox.html
 gitbook/jsrepl/sandbox.js
 gitbook/print.css
 gitbook/style.css
-gitbook/plugins/gitbook-plugin-mixpanel/plugin.js
+gitbook/plugins/gitbook-plugin-disqus/plugin.js
 gitbook/plugins/gitbook-plugin-mathjax/plugin.js
+gitbook/plugins/gitbook-plugin-mixpanel/plugin.js
 
 NETWORK:
 *
