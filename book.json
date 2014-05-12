@@ -1,8 +1,11 @@
 {
-  "plugins": ["disqus"],
+  "plugins": ["disqus", "ga"],
   "pluginsConfig": {
     "disqus": {
-        "shortName": "rorlabnewguide"
+      "shortName": "rorlabnewguide"
+    },
+    "ga": {
+      "token": "UA-30294363-4"
     }
   }
 }
