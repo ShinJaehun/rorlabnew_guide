@@ -126,3 +126,47 @@ grunt publish
 ## Github 서브도메인으로 확인하기
 
 Github 웹사이트에서 해당 프로젝트로 이동한 후 `master`외에 `gh-pages` 브랜치가 생성되었는지를 확인한다. 그리고 웹페이지의 오른쪽의 `Setting` 아이콘을 클릭하여 이동한 후 `Github Pages` 박스를 보자. 아마도 10분후에 반영된다는 안내 메시지와 함께 배포된 사이트 주소링크가 보일 것이다. 10분후 이 링크를 클릭하면 배포된 사이트에서 Gitbook이 제대로 보여야 한다.
+
+# Gitbook에 Disqus 댓글기능 추가하기
+
+Gitbook의 모든 페이지 하단에 Disqus 댓글기능을 추가할 수 있다.
+https://github.com/GitbookIO/plugin-disqus 를 참고하여 정리하면 아래와 같다. (`$ gitbook build ./ --plugins=disqus`는 할 필요없음)
+
+`npm`을 이용하여 disqus를 위한 플러그인을 설치한다.
+
+```
+$ npm install gitbook-plugin-disqus
+```
+
+그리고 `book.json` 파일을 열어 아래와 같이 추가한다. 없으면 생성하면 된다.
+
+```
+{
+  "plugins": ["disqus"],
+  "pluginsConfig": {
+    "disqus": {
+        "shortName": "xxxxxx"
+    }
+  }
+}
+```
+
+이제 테스트를 해 본다.
+
+```
+$ grunt test
+```
+
+제대로 동작하면 서버로 배포한다.
+
+```
+$ grunt publish
+```
+
+그리고 소스는 원격 저장소로 커밋후 푸시한다.
+
+```
+$ git add .
+$ git commit -m "disqus 플러그인 설치"
+$ git push
+```
