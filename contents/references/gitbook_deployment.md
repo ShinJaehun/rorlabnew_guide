@@ -195,9 +195,7 @@ $ npm install gitbook-plugin-ga
 }
 ```
 
-[주의사항]
-
-> `token`에는 Google Analytics tracking ID 값을 지정한다. `tacking ID` 값은 [계정에서 추적 코드 및 속성 ID 찾기](계정에서 추적 코드 및 속성 ID 찾기)를 참고하면 알 수 있다.
+> **[주의사항]** `token`에는 Google Analytics tracking ID 값을 지정한다. `tacking ID` 값은 [계정에서 추적 코드 및 속성 ID 찾기](계정에서 추적 코드 및 속성 ID 찾기)를 참고하면 알 수 있다.
 
 이제 테스트를 해 본다.
 

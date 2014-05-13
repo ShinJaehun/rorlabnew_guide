@@ -1,11 +1,15 @@
 {
-  "plugins": ["disqus", "ga"],
+  "plugins": ["disqus", "ga", "richquotes"],
   "pluginsConfig": {
     "disqus": {
       "shortName": "rorlabnewguide"
     },
     "ga": {
       "token": "UA-30294363-4"
+    },
+    "richquotes" :
+    {
+      "todos" : true /*false by default*/
     }
   }
 }
