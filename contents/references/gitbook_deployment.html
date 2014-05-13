@@ -40,7 +40,7 @@
 
 
         
-    <div class="book" data-github="RORLabGitBook/rorlabnew_guide" data-level="8.3" data-basepath="../.." data-revision="1399863239444">
+    <div class="book" data-github="RORLabGitBook/rorlabnew_guide" data-level="8.3" data-basepath="../.." data-revision="1400019674945">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -456,7 +456,7 @@ module.exports = function (grunt) {
 </code></pre><p>제대로 동작하는 것을 테스트하기 위해서는 아래와 같이 실행한다.</p>
 <pre><code>$ grunt test
 </code></pre><p>마지막으로 <code>gh-pages</code> 브랜치로 배포한다.</p>
-<pre><code>grunt publish
+<pre><code>$ grunt publish
 </code></pre><h2 id="github-">Github 서브도메인으로 확인하기</h2>
 <p>Github 웹사이트에서 해당 프로젝트로 이동한 후 <code>master</code>외에 <code>gh-pages</code> 브랜치가 생성되었는지를 확인한다. 그리고 웹페이지의 오른쪽의 <code>Setting</code> 아이콘을 클릭하여 이동한 후 <code>Github Pages</code> 박스를 보자. 아마도 10분후에 반영된다는 안내 메시지와 함께 배포된 사이트 주소링크가 보일 것이다. 10분후 이 링크를 클릭하면 배포된 사이트에서 Gitbook이 제대로 보여야 한다.</p>
 <h1 id="gitbook-disqus-">Gitbook에 Disqus 댓글기능 추가하기</h1>
@@ -469,7 +469,7 @@ module.exports = function (grunt) {
   &quot;plugins&quot;: [&quot;disqus&quot;],
   &quot;pluginsConfig&quot;: {
     &quot;disqus&quot;: {
-        &quot;shortName&quot;: &quot;xxxxxx&quot;
+      &quot;shortName&quot;: &quot;xxxxxx&quot;
     }
   }
 }
@@ -480,6 +480,28 @@ module.exports = function (grunt) {
 </code></pre><p>그리고 소스는 원격 저장소로 커밋후 푸시한다.</p>
 <pre><code>$ git add .
 $ git commit -m &quot;disqus 플러그인 설치&quot;
+$ git push
+</code></pre><h1 id="gitbook-google-analytics-">Gitbook에 Google Analytics 연결하기</h1>
+<pre><code>$ npm install gitbook-plugin-ga
+</code></pre><p>그리고 <code>book.json</code> 파일을 열어 <code>disqus</code> 플러그인에 아래와 같이 <code>ga</code> 플리그인을 추가한다. 없으면 새로 생성하면 된다.</p>
+<pre><code>{
+  &quot;plugins&quot;: [&quot;disqus&quot;, &quot;ga&quot;],
+  &quot;pluginsConfig&quot;: {
+    &quot;disqus&quot;: {
+      &quot;shortName&quot;: &quot;xxxxxx&quot;
+    },
+    &quot;ga&quot;: {
+      &quot;token&quot;: &quot;UA-XXXX-Y&quot;
+    }
+  }
+}
+</code></pre><p>이제 테스트를 해 본다.</p>
+<pre><code>$ grunt test
+</code></pre><p>제대로 동작하면 서버로 배포한다.</p>
+<pre><code>$ grunt publish
+</code></pre><p>그리고 소스는 원격 저장소로 커밋후 푸시한다.</p>
+<pre><code>$ git add .
+$ git commit -m &quot;Google Analytics 플러그인 설치&quot;
 $ git push
 </code></pre>
                     
