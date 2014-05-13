@@ -1,5 +1,5 @@
 {
-  "plugins": ["disqus", "ga"],
+  "plugins": ["disqus", "ga", "richquotes"],
   "pluginsConfig": {
     "disqus": {
       "shortName": "rorlabnewguide"
