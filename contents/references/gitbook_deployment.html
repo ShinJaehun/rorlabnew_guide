@@ -40,7 +40,7 @@
 
 
         
-    <div class="book" data-github="RORLabGitBook/rorlabnew_guide" data-level="8.3" data-basepath="../.." data-revision="1400019993924">
+    <div class="book" data-github="RORLabGitBook/rorlabnew_guide" data-level="8.3" data-basepath="../.." data-revision="1400022255490">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -482,6 +482,7 @@ module.exports = function (grunt) {
 $ git commit -m &quot;disqus 플러그인 설치&quot;
 $ git push
 </code></pre><h1 id="gitbook-google-analytics-">Gitbook에 Google Analytics 연결하기</h1>
+<p>[참고] <a href="https://github.com/GitbookIO/plugin-ga" target="_blank">https://github.com/GitbookIO/plugin-ga</a></p>
 <pre><code>$ npm install gitbook-plugin-ga
 </code></pre><p>그리고 <code>book.json</code> 파일을 열어 <code>disqus</code> 플러그인에 아래와 같이 <code>ga</code> 플리그인을 추가한다. 없으면 새로 생성하면 된다.</p>
 <pre><code>{
@@ -495,7 +496,11 @@ $ git push
     }
   }
 }
-</code></pre><p>이제 테스트를 해 본다.</p>
+</code></pre><p>[주의사항]</p>
+<blockquote>
+<p><code>token</code>에는 Google Analytics tracking ID 값을 지정한다. <code>tacking ID</code> 값은 <a href="계정에서 추적 코드 및 속성 ID 찾기">계정에서 추적 코드 및 속성 ID 찾기</a>를 참고하면 알 수 있다.</p>
+</blockquote>
+<p>이제 테스트를 해 본다.</p>
 <pre><code>$ grunt test
 </code></pre><p>제대로 동작하면 서버로 배포한다.</p>
 <pre><code>$ grunt publish
