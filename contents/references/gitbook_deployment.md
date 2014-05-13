@@ -120,7 +120,7 @@ $ grunt test
 마지막으로 `gh-pages` 브랜치로 배포한다.
 
 ```
-grunt publish
+$ grunt publish
 ```
 
 ## Github 서브도메인으로 확인하기
@@ -145,7 +145,7 @@ $ npm install gitbook-plugin-disqus
   "plugins": ["disqus"],
   "pluginsConfig": {
     "disqus": {
-        "shortName": "xxxxxx"
+      "shortName": "xxxxxx"
     }
   }
 }
@@ -168,5 +168,47 @@ $ grunt publish
 ```
 $ git add .
 $ git commit -m "disqus 플러그인 설치"
+$ git push
+```
+
+# Gitbook에 Google Analytics 연결하기
+
+```
+$ npm install gitbook-plugin-ga
+```
+
+그리고 `book.json` 파일을 열어 `disqus` 플러그인에 아래와 같이 `ga` 플리그인을 추가한다. 없으면 새로 생성하면 된다.
+
+```
+{
+  "plugins": ["disqus", "ga"],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "xxxxxx"
+    },
+    "ga": {
+      "token": "UA-XXXX-Y"
+    }
+  }
+}
+```
+
+이제 테스트를 해 본다.
+
+```
+$ grunt test
+```
+
+제대로 동작하면 서버로 배포한다.
+
+```
+$ grunt publish
+```
+
+그리고 소스는 원격 저장소로 커밋후 푸시한다.
+
+```
+$ git add .
+$ git commit -m "Google Analytics 플러그인 설치"
 $ git push
 ```
