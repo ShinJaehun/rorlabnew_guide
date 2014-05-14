@@ -232,10 +232,10 @@ $ npm install gitbook-plugin-richquotes
   "plugins": ["disqus", "ga", "richquotes"],
   "pluginsConfig": {
     "disqus": {
-      "shortName": "rorlabnewguide"
+      "shortName": "xxxxxx"
     },
     "ga": {
-      "token": "UA-30294363-4"
+      "token": "UA-XXXX-Y"
     },
     "richquotes": {
       "todos" : true
