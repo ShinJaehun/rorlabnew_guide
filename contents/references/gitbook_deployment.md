@@ -1,6 +1,6 @@
 # GitBook 저장소를 gh-pages로 배포하기
 
-참고 : http://stackoverflow.com/a/23095566
+> 참고 : http://stackoverflow.com/a/23095566
 
 한마디로, `grunt`를 이용하여 `publish`한다.
 
@@ -179,7 +179,7 @@ $ git push
 $ npm install gitbook-plugin-ga
 ```
 
-그리고 `book.json` 파일을 열어 `disqus` 플러그인에 아래와 같이 `ga` 플리그인을 추가한다. 없으면 새로 생성하면 된다.
+그리고 `book.json` 파일을 열어 플러그인에 아래와 같이 `ga` 플리그인을 추가한다. 없으면 새로 생성하면 된다.
 
 ```
 {
@@ -216,3 +216,107 @@ $ git add .
 $ git commit -m "Google Analytics 플러그인 설치"
 $ git push
 ```
+
+# GitBook에 RichQuotes 플러그인 추가하기
+
+[참고] https://github.com/erixtekila/gitbook-plugin-richquotes
+
+```
+$ npm install gitbook-plugin-richquotes
+```
+
+그리고 `book.json` 파일을 열어 플러그인에 아래와 같이 `richquotes` 플리그인을 추가하고 플러그인설정에도 옵션을 추가한다. 없으면 새로 생성하면 된다.
+
+```
+{
+  "plugins": ["disqus", "ga", "richquotes"],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "rorlabnewguide"
+    },
+    "ga": {
+      "token": "UA-30294363-4"
+    },
+    "richquotes": {
+      "todos" : true
+    }
+  }
+}
+```
+
+주석표기는 마크다운 블록표기를 확장한 기능이다. 지원되는 주석문자는 아래와 같다.
+
+* `> **Info** Info`
+* `> **Note** Note`
+* `> **Tag** Tag`
+* `> **Comment** Comment`
+* `> **Hint** Hint`
+* `> **Success** Success`
+* `> **Warning** Warning`
+* `> **Caution** Caution`
+* `> **Danger** Danger`
+* `> **Quote** Quote`
+
+주석문자는 대소문자를 가리지 않는다.
+
+또한 편집 목적으로 아래와 같은 특수문자를 사용할 수도 있다.
+
+* `> **todo** TODO`
+* `> **fixme** FIXME`
+* `> **xxx** XXX`
+
+Preview 모드에서는 주석이 영문글자로 보이지만 실제 배포시에는 아래와 같이 보이게 된다.
+
+> **Info** Info
+
+---
+
+> **Note** Note
+
+---
+
+> **Tag** Tag
+
+---
+
+> **Comment** Comment
+
+---
+
+> **Hint** Hint
+
+---
+
+> **Success** Success
+
+---
+
+> **Warning** Warning
+
+---
+
+> **Caution** Caution
+
+---
+
+> **Danger** Danger
+
+---
+
+> **Quote** Quote
+
+---
+
+> **todo** TODO
+
+---
+
+> **fixme** FIXME
+
+---
+
+> **xxx** XXX
+
+
+
+
